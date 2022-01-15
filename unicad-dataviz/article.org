@@ -1,0 +1,20 @@
+#+TITLE: Skisse: Unicad dataviz
+
+/Use case: interactively provide, explore and interpret engineering analysis
+data/
+
+1. Interkativ utforskning av analyseresultater mens ingeniøren jobber.
+   Ingeniøren sender nye datasett med resultater fra FEM-analyse rett til vår
+   modul, og kan utforske dataen live.
+2. Ingeniøren deler analyseresultater (datasett, plots, dashboard,
+   ingeniørvurderinger) med andre ingeniører
+3. Helhetlig dashboard for hele teamet -- nok til å sette seg inn i hvordan
+   prosjektet funker.
+4. Nedlastning / serialisering til statisk HTML og/eller PDF
+
+Egenskaper:
+
+- Immutability / stabile lenker. Tenk docker layers / IPFS.
+- Holistisk / utvidbart. Lavnivå først. Generisk, lenket. Vega er en "hook" for
+  å få grafer -- ikke et endgame.
+  - I kontrast til dagens løsninger --
