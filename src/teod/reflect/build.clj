@@ -26,7 +26,7 @@
         (writer/write edn)
         (println " done."))
       (catch Throwable t
-        (println "Faied!")
+        (println "Failed!")
         (clojure.stacktrace/print-stack-trace t)
         (tap> t)))))
 

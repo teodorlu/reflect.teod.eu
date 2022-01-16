@@ -4,19 +4,25 @@
                                                       org->hiccup teod.reflect.pandoc/org->hiccup}}}}]}
 (let [pandoc! (fn [path]
                 (org->hiccup
-                 (slurp (str "unicad-dataviz/" path))))]
+                 (slurp (str "unicad-dataviz/" path))
+                 {:debug true
+                  :work "work"}))]
   [:html {:class "no-js" :lang "en"}
    [:head
     [:meta {:charset "utf-8"}]
     [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
+
     [:title "aspirational hyper-incremental idea factory"]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]]
    [:body
+
     "Need to load that org"
     [:p (+ 1 2)]
     [:p "moreee"]
-    ;; (user/slurp "readme.org")
 
+
+    ;; (user/slurp "readme.org")
     (str *ns* " my ass")
     (pandoc! "article.org")
+
     ]])

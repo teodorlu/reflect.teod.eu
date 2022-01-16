@@ -38,41 +38,72 @@
   ;; a valid header:
   (header? {:t "Header", :c [1 ["header" [] []] ["header"]]}))
 
-(defn ->hiccup [data]
-  (into [:div]
-        (postwalk (fn [el]
-                    (cond
-                      (= "Str" (:t el))
-                      (:c el)
+(defn ->hiccup
+  ([data]
+   (->hiccup data {}))
+  ([data {:keys [debug]}]
+   (into [:div]
+         (postwalk (fn [el]
+                     (cond
+                       (= "Str" (:t el))
+                       (:c el)
 
-                      (= "Space" (:t el))
-                      " "
+                       (= "Space" (:t el))
+                       " "
 
-                      (= "Para" (:t el))
-                      (into [:p
-                             (if (every? str (:c el))
-                               (str/join "" (:c el))
-                               (:c el))])
+                       (= "Para" (:t el))
+                       (into [:p
+                              (if (every? string? (:c el))
+                                (str/join "" (:c el))
+                                (:c el))])
 
-                      (= "Plain" (:t el))
-                      (into [:span
-                             (if (every? str (:c el))
-                               (str/join "" (:c el))
-                               (:c el))])
+                       (= "Plain" (:t el))
+                       (into [:span
+                              (if (every? string? (:c el))
+                                (str/join "" (:c el))
+                                (:c el))])
 
-                      (= "BulletList" (:t el))
-                      (into [:ul]
-                            (for [li (:c el)]
-                              (into [:li] li)))
+                       (= "BulletList" (:t el))
+                       (into [:ul]
+                             (for [li (:c el)]
+                               (into [:li] li)))
 
-                      (header? el)
-                      (let [[level _attrs content] (:c el)]
-                        (into [(keyword (str "h" level))]
-                              content))
+                       #_#_
+                       (= (:t el) "Emph")
+                       (into [:em (:c el)])
 
-                      :else el))
+                       (header? el)
+                       (let [[level _attrs content] (:c el)]
+                         (into [(keyword (str "h" level))]
+                               content))
 
-                  data)))
+                       :else
+                       (when debug
+                         el)
+                       ))
+
+                   data))
+   ))
+
+(org->hiccup "/Use case: interactively provide, explore/")
+
+(org->hiccup "/Use case: interactively provide, explore/" {:debug true})
+
+(org-> "/My emphasis/")
+[{:t "Para", :c [{:t "Emph", :c [{:t "Str", :c "My"} {:t "Space"} {:t "Str", :c "emphasis"}]}]}]
+
+(org->hiccup "/My emphasis/" {:debug true})
+;; => [:div [:p [{:t "Emph", :c ["My" " " "emphasis"]}]]]
+      [:div [:p [:em "My emphasis"]]]
+
+
+
+;; without Emph condition
+[:div [:p [{:t "Emph", :c ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]}]]]
+
+;; with Emph condition
+[:div [:p [[:em ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]]]]]
+
 
 
 (comment
@@ -88,12 +119,20 @@
       org->
       ->hiccup)
   )
+;; => nil
+(defn org->hiccup
+  ([data]
+   (org->hiccup data {}))
+  ([data opts]
+   (-> data
+       org->
+       (->hiccup opts))))
 
-(defn org->hiccup [data]
-  (-> data org-> ->hiccup))
-
-(defn markdown->hiccup [data]
-  (-> data markdown-> ->hiccup))
+(defn markdown->hiccup
+  ([data]
+   (-> data markdown-> ->hiccup))
+  ([data opts]
+   (-> data markdown-> ->hiccup)))
 
 (comment
 
