@@ -1,13 +1,7 @@
 ^{:teod.reflect/filewriter :teod.reflect.filewriter/hiccup-html
   :teod.reflect/transformers [{:sym teod.reflect.sci/eval
-                               :opts {:sci-env {;; map sci ns -> clojure ns
-                                                ;; try requiring-resolve clojure ns, map over to sci ns
-                                                ;;
-                                                ;; so, what do we need? local slurp. local directory listing.
-                                                ;; we could just .. try ... and see what happens.
-                                                slurp clojure.core/slurp
-                                                sh clojure.java.shell/sh
-                                                }}}]}
+                               :opts {:sci-env {user {slurp clojure.core/slurp
+                                                      sh clojure.java.shell/sh}}}}]}
 ;; Too much indirection lol
 ;;
 ;;  1. I can configure arbitrary thing properties up here
@@ -15,19 +9,24 @@
 ;;
 ;;      - for instance, how do I configure the teod.reflect.sci/eval
 ;;        transformer? I'd like to pass args to it.
-[:html {:class "no-js" :lang "en"}
- [:head
-  [:meta {:charset "utf-8"}]
-  [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
-  [:title "aspirational hyper-incremental idea factory"]
-  [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]]
- [:body
-  "Need to load that org"
-  [:p (+ 1 2)]
-  [:p "moreee"]
-  ;; (user/slurp "readme.org")
+(let [slurp-here (fn [path]
+                   (slurp (str "unicad-dataviz/" path)))]
+  [:html {:class "no-js" :lang "en"}
+   [:head
+    [:meta {:charset "utf-8"}]
+    [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
+    [:title "aspirational hyper-incremental idea factory"]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]]
+   [:body
+    "Need to load that org"
+    [:p (+ 1 2)]
+    [:p "moreee"]
+    ;; (user/slurp "readme.org")
 
-  (str *ns*)
-  (slurp "README.org")
-  ;; (sh ["echo" "123"])
-  ]]
+    (str *ns* " my ass")
+    (slurp-here "article.org")
+    ;; (prn-str (sh ["pwd"]))
+    ;; (sh ["echo" "123"])
+    ;;
+    ;;
+    ]])
