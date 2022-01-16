@@ -68,41 +68,35 @@
                              (for [li (:c el)]
                                (into [:li] li)))
 
-                       #_#_
-                       (= (:t el) "Emph")
-                       (into [:em (:c el)])
-
                        (header? el)
                        (let [[level _attrs content] (:c el)]
                          (into [(keyword (str "h" level))]
                                content))
 
                        :else
-                       (when debug
-                         el)
-                       ))
-
+                       el))
                    data))
    ))
 
-(org->hiccup "/Use case: interactively provide, explore/")
+(comment
+  (org->hiccup "/Use case: interactively provide, explore/")
 
-(org->hiccup "/Use case: interactively provide, explore/" {:debug true})
+  (org->hiccup "/Use case: interactively provide, explore/" {:debug true})
 
-(org-> "/My emphasis/")
-[{:t "Para", :c [{:t "Emph", :c [{:t "Str", :c "My"} {:t "Space"} {:t "Str", :c "emphasis"}]}]}]
+  (org-> "/My emphasis/")
+  [{:t "Para", :c [{:t "Emph", :c [{:t "Str", :c "My"} {:t "Space"} {:t "Str", :c "emphasis"}]}]}]
 
-(org->hiccup "/My emphasis/" {:debug true})
-;; => [:div [:p [{:t "Emph", :c ["My" " " "emphasis"]}]]]
-      [:div [:p [:em "My emphasis"]]]
+  (org->hiccup "/My emphasis/" {:debug true})
+  ;; => [:div [:p [{:t "Emph", :c ["My" " " "emphasis"]}]]]
+  [:div [:p [:em "My emphasis"]]]
 
 
 
-;; without Emph condition
-[:div [:p [{:t "Emph", :c ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]}]]]
+  ;; without Emph condition
+  [:div [:p [{:t "Emph", :c ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]}]]]
 
-;; with Emph condition
-[:div [:p [[:em ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]]]]]
+  ;; with Emph condition
+  [:div [:p [[:em ["Use" " " "case:" " " "interactively" " " "provide," " " "explore"]]]]])
 
 
 
