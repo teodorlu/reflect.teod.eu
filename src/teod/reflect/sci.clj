@@ -7,9 +7,13 @@
 (defn link [x]
   [:a {:href x} x])
 
-(defn ctx []
-  (sci/init {:namespaces {'teod {'link link}}}))
+(defn ctx [env]
+  (sci/init {:namespaces {'user env}}))
 
 (defn eval [{:keys [sci-env]} form]
-  (sci/eval-form (ctx)
-                 form))
+  (let [env (reduce-kv (fn [coll k v]
+                             (assoc coll k (requiring-resolve v)))
+                           {}
+                           sci-env)]
+    (sci/eval-form (ctx env)
+                   form)))

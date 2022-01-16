@@ -2,10 +2,10 @@
   :teod.reflect/transformers [{:sym teod.reflect.sci/eval
                                :opts {:sci-env {;; map sci ns -> clojure ns
                                                 ;; try requiring-resolve clojure ns, map over to sci ns
-
+                                                ;;
                                                 ;; so, what do we need? local slurp. local directory listing.
                                                 ;; we could just .. try ... and see what happens.
-
+                                                slurp clojure.core/slurp
                                                 sh clojure.java.shell/sh
                                                 }}}]}
 ;; Too much indirection lol
@@ -25,6 +25,9 @@
   "Need to load that org"
   [:p (+ 1 2)]
   [:p "moreee"]
+  ;; (user/slurp "readme.org")
 
+  (str *ns*)
+  (slurp "README.org")
   ;; (sh ["echo" "123"])
   ]]
