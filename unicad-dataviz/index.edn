@@ -1,14 +1,6 @@
 ^{:teod.reflect/filewriter :teod.reflect.filewriter/hiccup-html
   :teod.reflect/transformers [{:sym teod.reflect.sci/eval
-                               :opts {:sci-env {user {slurp clojure.core/slurp
-                                                      sh clojure.java.shell/sh}}}}]}
-;; Too much indirection lol
-;;
-;;  1. I can configure arbitrary thing properties up here
-;;  2. Transformers are really generic -- but I can't pass values to them
-;;
-;;      - for instance, how do I configure the teod.reflect.sci/eval
-;;        transformer? I'd like to pass args to it.
+                               :opts {:sci-env {user {slurp clojure.core/slurp}}}}]}
 (let [slurp-here (fn [path]
                    (slurp (str "unicad-dataviz/" path)))]
   [:html {:class "no-js" :lang "en"}
@@ -25,8 +17,4 @@
 
     (str *ns* " my ass")
     (slurp-here "article.org")
-    ;; (prn-str (sh ["pwd"]))
-    ;; (sh ["echo" "123"])
-    ;;
-    ;;
     ]])

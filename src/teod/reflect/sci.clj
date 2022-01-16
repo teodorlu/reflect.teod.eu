@@ -2,8 +2,6 @@
   (:refer-clojure :exclude [eval])
   (:require [sci.core :as sci]))
 
-;; clojure.java.shell/sh
-
 (defn link [x]
   [:a {:href x} x])
 
