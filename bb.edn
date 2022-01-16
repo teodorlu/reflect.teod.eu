@@ -1,0 +1,4 @@
+{:tasks {watch (clojure "-X teod.reflect.build/watch!")
+         serve (shell "npx live-server")
+         -watch+serve {:depends [watch serve]}
+         watch+serve {:task (run '-watch+serve {:parallel true})}}}

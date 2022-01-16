@@ -1,0 +1,10 @@
+^{:teod.reflect/filewriter :teod.reflect.filewriter/hiccup-html
+  :teod.reflect/transformers [teod.reflect.sci/eval]}
+[:html {:class "no-js" :lang "en"}
+ [:head
+  [:meta {:charset "utf-8"}]
+  [:meta {:http-equiv "x-ua-compatible" :content "ie=edge"}]
+  [:title "aspirational hyper-incremental idea factory"]
+  [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]]
+ [:body
+  ]]
