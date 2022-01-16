@@ -21,6 +21,6 @@
 ;; But ... that metadata map can then /not/ be attached to certain objects. So
 ;; perhaps just having a config map as the first param is the best option, and
 ;; just ignore it (_opts) when it's not needed.
-(defn eval [form]
+(defn eval [opts form]
   (sci/eval-form (ctx)
                  form))

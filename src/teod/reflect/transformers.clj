@@ -6,8 +6,8 @@
 (defn transform [edn]
   (let [transformers (info/transformers edn)
         edn-nometa (with-meta edn {})
-        transformed (reduce (fn [val trans]
-                              (if-let [f (requiring-resolve trans)]
+        transformed (reduce (fn [val {:keys [sym opts]}]
+                              (if-let [f (requiring-resolve sym)]
                                 ;; should I provide more info here?
                                 ;;
                                 ;; hmm, not sure ... the whole thing goes into a
@@ -17,7 +17,7 @@
                                 ;;
                                 ;; Something passed to the transformers, then
                                 ;; passed further to SCI powered functions.
-                                (f val)
+                                (f opts val)
                                 (do
                                   (println "Error transforming EDN: " (info/source-path edn))
                                   val)))
