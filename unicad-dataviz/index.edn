@@ -1,8 +1,10 @@
 ^{:teod.reflect/filewriter :teod.reflect.filewriter/hiccup-html
   :teod.reflect/transformers [{:sym teod.reflect.sci/eval
-                               :opts {:sci-env {user {slurp clojure.core/slurp}}}}]}
-(let [slurp-here (fn [path]
-                   (slurp (str "unicad-dataviz/" path)))]
+                               :opts {:sci-env {user {slurp clojure.core/slurp
+                                                      org->hiccup teod.reflect.pandoc/org->hiccup}}}}]}
+(let [pandoc! (fn [path]
+                (org->hiccup
+                 (slurp (str "unicad-dataviz/" path))))]
   [:html {:class "no-js" :lang "en"}
    [:head
     [:meta {:charset "utf-8"}]
@@ -16,5 +18,5 @@
     ;; (user/slurp "readme.org")
 
     (str *ns* " my ass")
-    (slurp-here "article.org")
+    (pandoc! "article.org")
     ]])
