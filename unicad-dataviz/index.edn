@@ -7,4 +7,5 @@
   [:title "aspirational hyper-incremental idea factory"]
   [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]]
  [:body
+  "Need to load that org"
   ]]
