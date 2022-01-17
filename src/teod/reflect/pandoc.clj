@@ -64,18 +64,6 @@
          (for [p data]
            (->hiccup* p opts)))))
 
-(->hiccup2 [{:t "Para", :c [{:t "Str", :c "Paragraph"}]}])
-
-(->hiccup2
- [{:t "Para", :c [{:t "Str", :c "Para"} {:t "Space"} {:t "Str", :c "1."}]}
-  {:t "Para",
-   :c
-   [{:t "Str", :c "Para"}
-    {:t "Space"}
-    {:t "Emph", :c [{:t "Str", :c "two"}]}
-    {:t "Str", :c "."}]}]
- )
-
 (defn ->hiccup
   ([data]
    (->hiccup data {}))
