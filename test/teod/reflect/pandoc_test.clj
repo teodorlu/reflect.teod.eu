@@ -3,8 +3,8 @@
             [clojure.test :as t]))
 
 (t/deftest org->hiccup-test
-  (t/are [pandoc hiccup] (= (sut/->hiccup* pandoc {})
-                            hiccup)
+  (t/are [pandoc hiccup] (= hiccup
+                            (sut/->hiccup* pandoc {}))
     {:t "Para", :c [{:t "Str", :c "Paragraph"}]}
     [:p "Paragraph"]
 
@@ -16,4 +16,12 @@
 
     {:t "Emph", :c [{:t "Str", :c "two"}]}
     [:em "two"]
+
+    {:t "Para",
+     :c
+     [{:t "Str", :c "Para"}
+      {:t "Space"}
+      {:t "Emph", :c [{:t "Str", :c "two"}]}
+      {:t "Str", :c "."}]}
+    [:p "Para" " " [:em "two"] "."]
     ))

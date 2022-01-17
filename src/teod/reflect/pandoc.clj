@@ -38,7 +38,7 @@
   (cond (= (:t form)
            "Para")
         (into [:p]
-              (map #(->h* % opts) (:c form)))
+              (map #(->hiccup* % opts) (:c form)))
 
         (= (:t form)
            "Str")
@@ -51,7 +51,7 @@
         (= (:t form)
            "Emph")
         (into [:em]
-              (map #(->h* % opts) (:c form)))
+              (map #(->hiccup* % opts) (:c form)))
 
         ;; otherwise -- don't return!
         :else
