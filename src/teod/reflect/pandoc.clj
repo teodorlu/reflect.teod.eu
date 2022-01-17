@@ -48,6 +48,11 @@
            "Space")
         " "
 
+        (= (:t form)
+           "Emph")
+        (into [:em]
+              (map #(->h* % opts) (:c form)))
+
         ;; otherwise -- don't return!
         :else
         nil))

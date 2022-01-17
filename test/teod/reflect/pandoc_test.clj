@@ -9,4 +9,11 @@
     [:p "Paragraph"]
 
     {:t "Space"}
-    " "))
+    " "
+
+    {:t "Str", :c "A plain string"}
+    "A plain string"
+
+    {:t "Emph", :c [{:t "Str", :c "two"}]}
+    [:em "two"]
+    ))
