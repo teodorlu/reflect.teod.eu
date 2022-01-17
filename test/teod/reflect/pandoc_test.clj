@@ -24,4 +24,13 @@
       {:t "Emph", :c [{:t "Str", :c "two"}]}
       {:t "Str", :c "."}]}
     [:p "Para" " " [:em "two"] "."]
+
+    {:t "BulletList",
+     :c
+     [[{:t "Plain", :c [{:t "Str", :c "Item"}]}]
+      [{:t "Plain",
+        :c [{:t "Str", :c "Another"} {:t "Space"} {:t "Str", :c "item"}]}]]}
+    [:ul
+     [:li [:span "Item"]]
+     [:li [:span "Another" " " "item"]]]
     ))

@@ -24,7 +24,20 @@
            :format "markdown"}))
 
 (comment
-  (org-> "some text"))
+  (org-> "some text")
+
+  (org-> "* Header
+
+- Item
+- Another item")
+  [{:t "Header", :c [1 ["header" [] []] [{:t "Str", :c "Header"}]]}
+   {:t "BulletList",
+    :c
+    [[{:t "Plain", :c [{:t "Str", :c "Item"}]}]
+     [{:t "Plain",
+       :c [{:t "Str", :c "Another"} {:t "Space"} {:t "Str", :c "item"}]}]]}]
+
+  )
 
 (defn header?
   "Validates a pandoc 3-arity header - level, meta, content"
@@ -45,6 +58,11 @@
         (:c form)
 
         (= (:t form)
+           "Plain")
+        (into [:span]
+              (map #(->hiccup* % opts) (:c form)))
+
+        (= (:t form)
            "Space")
         " "
 
@@ -53,9 +71,24 @@
         (into [:em]
               (map #(->hiccup* % opts) (:c form)))
 
+        (= (:t form)
+           "BulletList")
+        (into [:ul]
+              (for [raw-list-item (:c form)]
+                (into [:li]
+                      (map #(->hiccup* % opts)
+                           raw-list-item))))
+
         ;; otherwise -- don't return!
         :else
         nil))
+
+(->hiccup* {:t "BulletList",
+            :c
+            [[{:t "Plain", :c [{:t "Str", :c "Item"}]}]
+             [{:t "Plain",
+               :c [{:t "Str", :c "Another"} {:t "Space"} {:t "Str", :c "item"}]}]]}
+           {})
 
 (defn ->hiccup2
   ([data] (->hiccup2 data {}))
