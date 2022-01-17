@@ -3,6 +3,8 @@
             [clojure.test :as t]))
 
 (t/deftest org->hiccup-test
+  ;; Are er skikkelig fin -- den lar oss skrive par med input og output, uten å
+  ;; styre med is, = funksjonskall og sånn. Anbefalt!
   (t/are [pandoc hiccup] (= hiccup
                             (sut/->hiccup* pandoc {}))
     {:t "Para", :c [{:t "Str", :c "Paragraph"}]}
