@@ -7,7 +7,7 @@
 (defn -parse [{:keys [source format]}]
   (assert source)
   (assert format)
-  (assert (#{"markdown" "org"} format)) ; whitelist - avoid errors
+  (assert (#{"markdown" "org"} format) "Currently supported format are markdown and org-mode.")
   (-> (sh "pandoc" "-f" format "-t" "json" :in source)
       :out
       (json/read-str :key-fn keyword)
