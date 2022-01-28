@@ -2,9 +2,7 @@
   "Pandoc-powered parsing and Hiccup generation from plain text"
   (:require
    [clojure.data.json :as json]
-   [clojure.java.shell :refer [sh]]
-   [clojure.walk :refer [prewalk postwalk]]
-   [clojure.string :as str]))
+   [clojure.java.shell :refer [sh]]))
 
 (defn -parse [{:keys [source format]}]
   (assert source)
@@ -22,22 +20,6 @@
 (defn markdown-> [source]
   (-parse {:source source
            :format "markdown"}))
-
-(comment
-  (org-> "some text")
-
-  (org-> "* Header
-
-- Item
-- Another item")
-  [{:t "Header", :c [1 ["header" [] []] [{:t "Str", :c "Header"}]]}
-   {:t "BulletList",
-    :c
-    [[{:t "Plain", :c [{:t "Str", :c "Item"}]}]
-     [{:t "Plain",
-       :c [{:t "Str", :c "Another"} {:t "Space"} {:t "Str", :c "item"}]}]]}]
-
-  )
 
 (defn header?
   "Validates a pandoc 3-arity header - level, meta, content"
@@ -83,70 +65,9 @@
         :else
         nil))
 
-(->hiccup* {:t "BulletList",
-            :c
-            [[{:t "Plain", :c [{:t "Str", :c "Item"}]}]
-             [{:t "Plain",
-               :c [{:t "Str", :c "Another"} {:t "Space"} {:t "Str", :c "item"}]}]]}
-           {})
-
-(defn ->hiccup2
-  ([data] (->hiccup2 data {}))
+(defn ->hiccup
+  ([data] (->hiccup data {}))
   ([data opts]
    (into [:div]
          (for [p data]
            (->hiccup* p opts)))))
-
-(defn ->hiccup
-  ([data]
-   (->hiccup data {}))
-  ([data {:keys [debug]}]
-   (into [:div]
-         (prewalk (fn [el]
-                     (cond
-                       (= "Str" (:t el))
-                       (:c el)
-
-                       (= "Space" (:t el))
-                       " "
-
-                       (= "Para" (:t el))
-                       (into [:p
-                              (if (every? string? (:c el))
-                                (str/join "" (:c el))
-                                (:c el))])
-
-                       (= "Plain" (:t el))
-                       (into [:span
-                              (if (every? string? (:c el))
-                                (str/join "" (:c el))
-                                (:c el))])
-
-                       (= "BulletList" (:t el))
-                       (into [:ul]
-                             (for [li (:c el)]
-                               (into [:li] li)))
-
-                       (header? el)
-                       (let [[level _attrs content] (:c el)]
-                         (into [(keyword (str "h" level))]
-                               content))
-
-                       :else
-                       el))
-                   data))))
-
-(defn org->hiccup
-  ([data]
-   (org->hiccup data {}))
-  ([data opts]
-   (-> data
-       org->
-       (->hiccup opts))))
-
-(defn markdown->hiccup
-  ([data]
-   (-> data markdown-> ->hiccup))
-  ([data opts]
-   (-> data markdown-> ->hiccup)))
-
