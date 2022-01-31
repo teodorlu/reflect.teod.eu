@@ -13,13 +13,31 @@ Dagens tema:
     - Hvordan team jobber sammen
     - Epistemologi, "hva er det egentlig vi kan vite?"
 
+.
+
+                                 Let's go!
+
+                                    ☀️😎
+
+* AKA Teodors holdning til alt det rotete i verden
+
+(tror /egentlig/ jeg er introvert, men vet ikke helt)
 
 
-Håper dere synes dette er like gøy som jeg!
+| Unix                 | Verden                     |
+|----------------------+----------------------------|
+| Strukturert og fint  | 💥💥💥🕺🕺🕺💃💃💃🔥🔥🔥🔥 |
+| Ting er som det skal | Helt kaos                  |
+|                      | Ganske gøy                 |
+| Deterministisk       | Stokastisk                 |
+| Begrenset effekt     | Ubegrenset potensial       |
 
 
 
-                                      ☀️😎
+
+
+           verden :: så kaos at kolonnene mine
+                        ikke holder!
 
 * 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet
 
@@ -87,7 +105,7 @@ eller
   relasjonene til brukeren.
 #+end_quote
 
-? Hvordan liker du å jobbe? (bonus: når ber vi om outcome og output?)
+? Hvordan liker du å jobbe? (bonus: hvilken måler outcome? og output?)
 
 Mer: https://svpg.com/lead-with-context-not-control/
 * Observasjon, verdivurdering eller opsjon?
