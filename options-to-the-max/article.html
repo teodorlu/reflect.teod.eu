@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-31 ma. 22:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Opsjoner anvendt</title>
+<meta name="author" content="Teodor Heggelund" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Opsjoner anvendt</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3752485">1. God morgen — nå skal vi nerde!</a></li>
+<li><a href="#org6ddcf3e">2. 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet</a></li>
+<li><a href="#org4182b63">3. Opsjoner er nøkkelen til å begrense ulempe — uten å begrense fordel</a></li>
+<li><a href="#org1b67ee0">4. Finansiell opsjon — kjøpe noe senere til bestemt pris (bare hvis du vil)</a></li>
+<li><a href="#orgb524970">5. Opsjoner lar deg lede med konktekst over kontroll</a></li>
+<li><a href="#org508f8b9">6. Observasjon, verdivurdering eller opsjon?</a></li>
+<li><a href="#orgb9ccd37">7. Prøv å gi prosjektleder gode opsjoner!</a></li>
+<li><a href="#org3a31092">8. Opsjon til å si ja/nei/hør her, nå har du misforstått/jaaaaaa ❤️❤️❤️❤️</a></li>
+<li><a href="#orgc13df0f">9. Strategisk opsjon — vi kan velge å gjøre noe sammen</a></li>
+<li><a href="#org768a1e4">10. Opsjon for forklaring av virkeligheten — også kjent som &ldquo;vitenskaplig teori&rdquo;</a></li>
+<li><a href="#orgc71f042">11. Referanser</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3752485" class="outline-2">
+<h2 id="org3752485"><span class="section-number-2">1.</span> God morgen — nå skal vi nerde!</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Dagens tema:
+</p>
+
+<ul class="org-ul">
+<li>Kultur</li>
+<li>Hvordan team jobber sammen</li>
+<li>Epistemologi, &ldquo;hva er det egentlig vi kan vite?&rdquo;</li>
+</ul>
+
+
+
+<p>
+Håper dere synes dette er like gøy som jeg!
+</p>
+
+
+
+<p>
+☀️😎
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ddcf3e" class="outline-2">
+<h2 id="org6ddcf3e"><span class="section-number-2">2.</span> 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Teodors forrige lyntale var om:
+</p>
+
+<blockquote>
+<p>
+En deskriptiv sannhet stemmer overens med observasjoner
+</p>
+
+<p>
+En preskriptiv sannhet gjør at gode ting skjer rund deg
+</p>
+</blockquote>
+
+<p>
+Det er forskjell på å <i>kunne ting</i> og å <i>smakfullt kunne få de rette
+tingene til å skje</i>.
+</p>
+
+<p>
+Ved å se på preskriptive &ldquo;sannheter&rdquo; som <i>opsjoner</i> kan du teste &ldquo;sannhetene&rdquo;
+og se hvor bra de funker.
+</p>
+
+<p>
+<a href="https://garasjen.slack.com/archives/C01KB5RSAU9/p1623913168093200">https://garasjen.slack.com/archives/C01KB5RSAU9/p1623913168093200</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org4182b63" class="outline-2">
+<h2 id="org4182b63"><span class="section-number-2">3.</span> Opsjoner er nøkkelen til å begrense ulempe — uten å begrense fordel</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Teodors regler for å vinne (WIP):
+</p>
+
+<ol class="org-ol">
+<li><b>Del intensjon</b>. Hvor er du på vei? Kommuniser med andre, kommuniser med
+deg selv. Skriftlig og muntlig.</li>
+<li><b>Forfølg opsjoner utrettelig</b> for å begrense nedeside, og muliggjøre
+oppeside</li>
+<li><b>Lek fritt ❤️</b> med estetikk, regler, arbeidsflyt
+<ul class="org-ul">
+<li>og invitér andre til å bli med.</li>
+</ul></li>
+</ol>
+
+
+
+<p>
+Altså:
+</p>
+
+<p>
+Opsjoner er skikkelig nyttige.                      (verdivurdering)
+</p>
+</div>
+</div>
+<div id="outline-container-org1b67ee0" class="outline-2">
+<h2 id="org1b67ee0"><span class="section-number-2">4.</span> Finansiell opsjon — kjøpe noe senere til bestemt pris (bare hvis du vil)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Året er 2025 - Vake-aksjer omsettes for NOK 10 000,- per aksje.
+</p>
+
+<p>
+Hva bør prisen på opsjon til å kjøpe vake-aksjer i 2030 for 20 0000,- per aksje
+være?
+</p>
+
+<p>
+<b>A</b> - gratis - &ldquo;det er jo verd mindre i dag!&rdquo;
+</p>
+
+<p>
+<b>B</b> - NOK 1 000 - &ldquo;antar det er cirka 1/10 sjanse for at Vake går til himmels,
+                 vi vil være med på festen.&rdquo;
+</p>
+
+
+
+
+<p>
+Nå har dere en opsjon på å komme med innspill — men ikke en plikt :)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb524970" class="outline-2">
+<h2 id="orgb524970"><span class="section-number-2">5.</span> Opsjoner lar deg lede med konktekst over kontroll</h2>
+<div class="outline-text-2" id="text-5">
+<blockquote>
+<p>
+Adam, du lager denne React-komponenten. Og Alice, du implmenterer
+dette API-et som jeg har spesifisert opp i OpenAPI fordi OpenAPI Er
+Best. Så kommer dere tilbake til meg, så skal jeg si om det er Bra
+eller Dårlig.
+</p>
+</blockquote>
+
+<p>
+eller
+</p>
+
+<blockquote>
+<p>
+Vi trenger å vise kjærledyr-ansatt-relasjoner. Jeg vil at vi får opp
+forslag til hvordan API-et kan se ut, og hvordan vi kan presenterere
+relasjonene til brukeren.
+</p>
+</blockquote>
+
+<p>
+? Hvordan liker du å jobbe? (bonus: når ber vi om outcome og output?)
+</p>
+
+<p>
+Mer: <a href="https://svpg.com/lead-with-context-not-control/">https://svpg.com/lead-with-context-not-control/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org508f8b9" class="outline-2">
+<h2 id="org508f8b9"><span class="section-number-2">6.</span> Observasjon, verdivurdering eller opsjon?</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Typer påstander:
+</p>
+
+<ol class="org-ol">
+<li>Jeg <b>observerte</b> en ingeniør som slet med å sette opp Unicad Excel
+Companion 4. desember
+<ul class="org-ul">
+<li>(beskrivelse av observert virkelighet i tid og sted)</li>
+</ul></li>
+
+<li>Det <b>er viktig for meg</b> at Unicad er lett å bruke — ellers vil ingeniørene
+bare fortsette å bruke Mathcad
+<ul class="org-ul">
+<li>(subjektiv vurdering om hva som er bra/dårlig, for hvem)</li>
+</ul></li>
+
+<li>Vi kan <b>gjøre det lett å hente ut dokumenttoken</b> eller <b>lage vanlig login i
+Excel Companion</b>
+<ul class="org-ul">
+<li>to opsjoner, yay!</li>
+<li><i>ting vi kan velge å gjøre</i></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb9ccd37" class="outline-2">
+<h2 id="orgb9ccd37"><span class="section-number-2">7.</span> Prøv å gi prosjektleder gode opsjoner!</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Nå du er villig til å <i>brette ut</i> dine opsjoner og diskutere, får
+andre innsikt.
+</p>
+
+<p>
+Du gir andre innflytelse.
+</p>
+
+
+<p>
+Samtidig får <i>du</i> innflytelse.
+</p>
+
+<p>
+Fordi andre kan <i>velge</i>
+  å følge opsjoner du tilbyr!
+</p>
+
+
+
+<p>
+Mer: <i>Extreme Ownership</i>, Jocko Willink
+     Kapittel 10: &ldquo;Leading Up and Down the Chain of Command&rdquo;
+</p>
+</div>
+</div>
+<div id="outline-container-org3a31092" class="outline-2">
+<h2 id="org3a31092"><span class="section-number-2">8.</span> Opsjon til å si ja/nei/hør her, nå har du misforstått/jaaaaaa ❤️❤️❤️❤️</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Hva hvis <i>alle</i> får opsjoner, som gir handlingsrom til å gjøre en god jobb?
+</p>
+
+<p>
+Hadde ikke det vært fint? Om vi kan få til en hel kultur som er sånn?
+</p>
+
+<p>
+Eller .. er det sånn allerede, her hos oss?
+</p>
+
+<p>
+   🤔    🤔
+🤔    🤔    🤔
+   🤔    🤔
+      🤔
+</p>
+
+<blockquote>
+<p>
+Ny opsjon til å komme med innspill!
+</p>
+
+<p>
+🥁
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgc13df0f" class="outline-2">
+<h2 id="orgc13df0f"><span class="section-number-2">9.</span> Strategisk opsjon — vi kan velge å gjøre noe sammen</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Opsjonsorientert:
+</p>
+
+<ul class="org-ul">
+<li>Rune/Kim/Anders jobber med å rigge opp en <i>opsjon</i> for at Iterate kan
+ta funding til en verdsetning.
+<ul class="org-ul">
+<li>har dere lagt merke til at Rune hele tiden stresser at Iterate
+ikke <i>skal</i> ta funding?</li>
+</ul></li>
+
+<li>Fredrik snakker med mange forskjellige kunder — så Iterate kan <i>velge</i>
+å si nei
+<ul class="org-ul">
+<li>I kontrast til &ldquo;send alle konsulentene til Skatteetaten, it&rsquo;s too
+big to fail&rdquo;
+<ul class="org-ul">
+<li>(then it fails lol)</li>
+</ul></li>
+</ul></li>
+
+<li>Vake kan <i>velge</i> å jobbe tett med en kunde, hvis det lønner seg
+strategisk
+<ul class="org-ul">
+<li>(gitt likviditet)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org768a1e4" class="outline-2">
+<h2 id="org768a1e4"><span class="section-number-2">10.</span> Opsjon for forklaring av virkeligheten — også kjent som &ldquo;vitenskaplig teori&rdquo;</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+&ldquo;Vitenskap&rdquo;: forskere jobber med å lage opsjoner på virkelightetsmodeller, og
+falsifisere eksisterende modeller.
+</p>
+
+<ol class="org-ol">
+<li>Forsker postulerer en hypotese basert på en magefølgelse</li>
+
+<li>Falsifisert? Nope — da kaster vi den i søpla</li>
+
+<li>Forklarer den <i>mange</i> observasjoner? OK — da kan den forfremmes til en <i>teori</i></li>
+
+<li>Forklarer den <i>ikke lenger</i> virkeligheten? Da gir vi den sparken.</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgc71f042" class="outline-2">
+<h2 id="orgc71f042"><span class="section-number-2">11.</span> Referanser</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Mersmak? Prøv:
+</p>
+
+<ul class="org-ul">
+<li>David Deutch: <i>The Beginning of Infinity</i>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/The_Beginning_of_Infinity">https://en.wikipedia.org/wiki/The_Beginning_of_Infinity</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Taleb: <i>Antifragile</i>, <i>Skin in the Game</i>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Antifragile_(book)">https://en.wikipedia.org/wiki/Antifragile_(book)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Skin_in_the_Game_(book)">https://en.wikipedia.org/wiki/Skin_in_the_Game_(book)</a></li>
+</ul></li>
+
+<li>Richard Meadows: <i>Optionality</i>
+<ul class="org-ul">
+<li><a href="https://www.goodreads.com/book/show/55738971-optionality">https://www.goodreads.com/book/show/55738971-optionality</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Teodor Heggelund</p>
+<p class="date">Created: 2022-01-31 ma. 22:35</p>
+</div>
+</body>
+</html>

@@ -1,4 +1,5 @@
-(ns user)
+(ns user
+  (:require [clojure.repl :refer :all]))
 
 ;; (clojure "-X teod.reflect.build/watch!")
 

@@ -1,0 +1,191 @@
+#+TITLE: Opsjoner anvendt
+
+# *-* fill-column: 70 *-*
+
+* God morgen — nå skal vi nerde!
+
+
+
+
+Dagens tema:
+
+    - Kultur
+    - Hvordan team jobber sammen
+    - Epistemologi, "hva er det egentlig vi kan vite?"
+
+
+
+Håper dere synes dette er like gøy som jeg!
+
+
+
+                                      ☀️😎
+
+* 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet
+
+Teodors forrige lyntale var om:
+
+#+begin_quote
+  En deskriptiv sannhet stemmer overens med observasjoner
+
+  En preskriptiv sannhet gjør at gode ting skjer rund deg
+#+end_quote
+
+Det er forskjell på å /kunne ting/ og å /smakfullt kunne få de rette
+tingene til å skje/.
+
+Ved å se på preskriptive "sannheter" som /opsjoner/ kan du teste "sannhetene"
+og se hvor bra de funker.
+
+https://garasjen.slack.com/archives/C01KB5RSAU9/p1623913168093200
+* Opsjoner er nøkkelen til å begrense ulempe — uten å begrense fordel
+
+Teodors regler for å vinne (WIP):
+
+1. *Del intensjon*. Hvor er du på vei? Kommuniser med andre, kommuniser med
+   deg selv. Skriftlig og muntlig.
+2. *Forfølg opsjoner utrettelig* for å begrense nedeside, og muliggjøre
+   oppeside
+3. *Lek fritt ❤️* med estetikk, regler, arbeidsflyt
+   - og invitér andre til å bli med.
+
+
+
+Altså:
+
+         Opsjoner er skikkelig nyttige.                      (verdivurdering)
+* Finansiell opsjon — kjøpe noe senere til bestemt pris (bare hvis du vil)
+
+Året er 2025 - Vake-aksjer omsettes for NOK 10 000,- per aksje.
+
+Hva bør prisen på opsjon til å kjøpe vake-aksjer i 2030 for 20 0000,- per aksje
+være?
+
+*A* - gratis - "det er jo verd mindre i dag!"
+
+*B* - NOK 1 000 - "antar det er cirka 1/10 sjanse for at Vake går til himmels,
+                 vi vil være med på festen."
+
+
+
+
+  Nå har dere en opsjon på å komme med innspill — men ikke en plikt :)
+* Opsjoner lar deg lede med konktekst over kontroll
+
+#+begin_quote
+  Adam, du lager denne React-komponenten. Og Alice, du implmenterer
+  dette API-et som jeg har spesifisert opp i OpenAPI fordi OpenAPI Er
+  Best. Så kommer dere tilbake til meg, så skal jeg si om det er Bra
+  eller Dårlig.
+#+end_quote
+
+eller
+
+#+begin_quote
+  Vi trenger å vise kjærledyr-ansatt-relasjoner. Jeg vil at vi får opp
+  forslag til hvordan API-et kan se ut, og hvordan vi kan presenterere
+  relasjonene til brukeren.
+#+end_quote
+
+? Hvordan liker du å jobbe? (bonus: når ber vi om outcome og output?)
+
+Mer: https://svpg.com/lead-with-context-not-control/
+* Observasjon, verdivurdering eller opsjon?
+
+Typer påstander:
+
+1. Jeg *observerte* en ingeniør som slet med å sette opp Unicad Excel
+   Companion 4. desember
+   - (beskrivelse av observert virkelighet i tid og sted)
+
+2. Det *er viktig for meg* at Unicad er lett å bruke — ellers vil ingeniørene
+   bare fortsette å bruke Mathcad
+   - (subjektiv vurdering om hva som er bra/dårlig, for hvem)
+
+3. Vi kan *gjøre det lett å hente ut dokumenttoken* eller *lage vanlig login i
+   Excel Companion*
+   - to opsjoner, yay!
+   - /ting vi kan velge å gjøre/
+* Prøv å gi prosjektleder gode opsjoner!
+
+
+    Nå du er villig til å /brette ut/ dine opsjoner og diskutere, får
+    andre innsikt.
+
+        Du gir andre innflytelse.
+
+
+    Samtidig får /du/ innflytelse.
+
+      Fordi andre kan /velge/
+        å følge opsjoner du tilbyr!
+
+
+
+Mer: /Extreme Ownership/, Jocko Willink
+     Kapittel 10: "Leading Up and Down the Chain of Command"
+* Opsjon til å si ja/nei/hør her, nå har du misforstått/jaaaaaa ❤️❤️❤️❤️
+
+Hva hvis /alle/ får opsjoner, som gir handlingsrom til å gjøre en god jobb?
+
+ Hadde ikke det vært fint? Om vi kan få til en hel kultur som er sånn?
+
+    Eller .. er det sånn allerede, her hos oss?
+
+      🤔    🤔
+   🤔    🤔    🤔
+      🤔    🤔
+         🤔
+
+#+begin_quote
+  Ny opsjon til å komme med innspill!
+
+  🥁
+#+end_quote
+
+* Strategisk opsjon — vi kan velge å gjøre noe sammen
+
+Opsjonsorientert:
+
+- Rune/Kim/Anders jobber med å rigge opp en /opsjon/ for at Iterate kan
+  ta funding til en verdsetning.
+  - har dere lagt merke til at Rune hele tiden stresser at Iterate
+    ikke /skal/ ta funding?
+
+- Fredrik snakker med mange forskjellige kunder — så Iterate kan /velge/
+  å si nei
+  - I kontrast til "send alle konsulentene til Skatteetaten, it's too
+    big to fail"
+    - (then it fails lol)
+
+- Vake kan /velge/ å jobbe tett med en kunde, hvis det lønner seg
+  strategisk
+  - (gitt likviditet)
+* Opsjon for forklaring av virkeligheten — også kjent som "vitenskaplig teori"
+
+"Vitenskap": forskere jobber med å lage opsjoner på virkelightetsmodeller, og
+falsifisere eksisterende modeller.
+
+1. Forsker postulerer en hypotese basert på en magefølgelse
+   
+2. Falsifisert? Nope — da kaster vi den i søpla
+
+3. Forklarer den /mange/ observasjoner? OK — da kan den forfremmes til en /teori/
+
+4. Forklarer den /ikke lenger/ virkeligheten? Da gir vi den sparken.
+
+
+* Referanser
+
+Mersmak? Prøv:
+
+- David Deutch: /The Beginning of Infinity/
+  - https://en.wikipedia.org/wiki/The_Beginning_of_Infinity
+
+
+- Taleb: /Antifragile/, /Skin in the Game/
+  - https://en.wikipedia.org/wiki/Antifragile_(book)
+  - https://en.wikipedia.org/wiki/Skin_in_the_Game_(book)
+
+- Richard Meadows: /Optionality/
+  - https://www.goodreads.com/book/show/55738971-optionality
