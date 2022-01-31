@@ -41,7 +41,7 @@ På dagens meny står:
 
 * 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet
 
-Teodors forrige lyntale var om:
+Fra Teodors forrige lyntale:
 
 #+begin_quote
   En deskriptiv sannhet stemmer overens med observasjoner
@@ -161,7 +161,7 @@ Hva hvis /alle/ får opsjoner, som gir handlingsrom til å gjøre en god jobb?
   🥁
 #+end_quote
 
-* Strategisk opsjon — vi kan velge å gjøre noe sammen
+* Strategisk opsjon — vi kan velge å gjøre noe sammen :noexport:
 
 Opsjonsorientert:
 
