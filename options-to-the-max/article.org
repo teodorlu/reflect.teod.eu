@@ -7,7 +7,7 @@
 
 
 
-Dagens tema:
+På dagens meny står:
 
     - Kultur
     - Hvordan team jobber sammen
@@ -204,6 +204,7 @@ Mersmak? Prøv:
 - Taleb: /Antifragile/, /Skin in the Game/
   - https://en.wikipedia.org/wiki/Antifragile_(book)
   - https://en.wikipedia.org/wiki/Skin_in_the_Game_(book)
+
 
 - Richard Meadows: /Optionality/
   - https://www.goodreads.com/book/show/55738971-optionality
