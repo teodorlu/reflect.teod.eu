@@ -1,4 +1,4 @@
-#+TITLE: Opsjoner anvendt
+#+TITLE: OPTIONS TO THE MAX
 
 # *-* fill-column: 70 *-*
 
