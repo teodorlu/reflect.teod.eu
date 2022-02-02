@@ -186,7 +186,8 @@ falsifisere eksisterende modeller.
 
 1. Forsker postulerer en hypotese basert på en magefølgelse
    
-2. Falsifisert? Nope — da kaster vi den i søpla
+2. Stemmer hypotesen overrens med eksperimenter / observasjoner? Hvis ikke — da
+   kaster vi den i søpla
 
 3. Forklarer den /mange/ observasjoner? OK — da kan den forfremmes til en /teori/
 
