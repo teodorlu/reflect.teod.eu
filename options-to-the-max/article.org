@@ -2,6 +2,18 @@
 
 # *-* fill-column: 70 *-*
 
+* Frame -- nå skal vi titte på en presentasjon noen har skrevet
+
+
+
+Som Fredrik pleier å si når han vil ha feedback, "det er noen andre som har
+laget dette, jeg vil diskutere hvor bra det funker"
+
+
+
+
+                    Kritisere sammen!
+
 * God morgen — nå skal vi nerde!
 
 
@@ -161,7 +173,7 @@ Hva hvis /alle/ får opsjoner, som gir handlingsrom til å gjøre en god jobb?
   🥁
 #+end_quote
 
-* Strategisk opsjon — vi kan velge å gjøre noe sammen :noexport:
+* Strategisk opsjon — vi kan velge å gjøre noe sammen
 
 Opsjonsorientert:
 
@@ -210,3 +222,7 @@ Mersmak? Prøv:
 
 - Richard Meadows: /Optionality/
   - https://www.goodreads.com/book/show/55738971-optionality
+* Referanser 2
+Opptak 2022-02-02: https://drive.google.com/file/d/1YmJLqVJ_KbemHqIkeMl2GOUlseFeQ8VX/view
+
+Publisert i #general 2022-02-02: https://garasjen.slack.com/archives/C03AAUVL9/p1643800616902019
