@@ -21,9 +21,8 @@ laget dette, jeg vil diskutere hvor bra det funker"
 
 På dagens meny står:
 
-    - Kultur
-    - Hvordan team jobber sammen
-    - Epistemologi, "hva er det egentlig vi kan vite?"
+  - Hvordan team jobber sammen
+  - Epistemologi, "hva er det egentlig vi kan vite?"
 
 .
 
@@ -31,18 +30,15 @@ På dagens meny står:
 
                                     ☀️😎
 
-* AKA Teodors holdning til alt det rotete i verden
+* Opsjoner: Teodors holdning til alt det rotete i verden
 
-(tror /egentlig/ jeg er introvert, men er litt usikker)
-
-
-| Unix                 | Verden                     |
-|----------------------+----------------------------|
-| Strukturert og fint  | 💥💥💥🕺🕺🕺💃💃💃🔥🔥🔥🔥 |
-| Ting er som det skal | Helt kaos                  |
-|                      | Ganske gøy                 |
-| Deterministisk       | Stokastisk                 |
-| Begrenset effekt     | Ubegrenset potensial       |
+| Unix                 | Verden               |
+|----------------------+----------------------|
+| Strukturert og fint  | 💥💥🕺🕺💃💃🔥🔥     |
+| Ting er som det skal | Helt kaos            |
+|                      | Ganske gøy           |
+| Deterministisk       | Stokastisk           |
+| Begrenset effekt     | Ubegrenset potensial |
 
 
 
@@ -50,6 +46,13 @@ På dagens meny står:
 
            verden :: så kaos at kolonnene mine
                         blir dyttet til siden!
+
+Kommentarer fra Oddmund:
+
+- dårlig tittel?
+- dårlig "tagline"?
+- Unix vs verden er litt rart å sammenlikne, usymmetrisk.
+  "Unix eksempel, verden er virkelig"
 
 * 2021-06-17: Lyntale, Deskriptiv sannhet, preskriptiv sannhet
 
@@ -120,9 +123,9 @@ eller
 ? Hvordan liker du å jobbe? (bonus: hvilken måler outcome? og output?)
 
 Mer: https://svpg.com/lead-with-context-not-control/
-* Observasjon, verdivurdering eller opsjon?
+* All kunnskap er /observasjon/, /verdivurdering/ eller /opsjon/.
 
-Typer påstander:
+Eksempler:
 
 1. Jeg *observerte* en ingeniør som slet med å sette opp Unicad Excel
    Companion 4. desember
@@ -154,11 +157,11 @@ Typer påstander:
 
 Mer: /Extreme Ownership/, Jocko Willink
      Kapittel 10: "Leading Up and Down the Chain of Command"
-* Opsjon til å si ja/nei/hør her, nå har du misforstått/jaaaaaa ❤️❤️❤️❤️
+* Opsjon til å si ja/nei/hør her, nå har du misforstått
 
 Hva hvis /alle/ får opsjoner, som gir handlingsrom til å gjøre en god jobb?
 
- Hadde ikke det vært fint? Om vi kan få til en hel kultur som er sånn?
+  Hadde ikke det vært fint? Om vi kan få til en hel kultur som er sånn?
 
     Eller .. er det sånn allerede, her hos oss?
 
@@ -191,6 +194,8 @@ Opsjonsorientert:
 - Vake kan /velge/ å jobbe tett med en kunde, hvis det lønner seg
   strategisk
   - (gitt likviditet)
+
+Oddmund og Teodor: strategi som portefølge av strategiske opsjoner.
 * Opsjon for forklaring av virkeligheten — også kjent som "vitenskaplig teori"
 
 "Vitenskap": forskere jobber med å lage opsjoner på virkelightetsmodeller, og
