@@ -1,1 +1,21 @@
 #+TITLE: On which we may reflect
+
+How to learn?
+
+1. Learn the right things (search for orthogonal skills that spans a space where
+   you want to have impact)
+2. Learn fast with a rapid feedback loop
+3. Reflect & introspect on process and intent
+
+...
+
+I want to be able to explain this to people. And I want to iterate on it myself.
+I'll need some slides. And I'll want to edit those slides structurally, probably
+with Org-mode. And I'll want to /run/ the resulting slides. Probably in a sci
+context like scittle.
+
+(That's actually a case for where sci-in-sci makes sense)
+
+But ... how do I want to handle it? Produce static HTML, then enrich it? With
+hooks, perhaps? Do I want to produce multiple files? I think I want to control
+that with EDN data.
