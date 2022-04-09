@@ -1,6 +1,6 @@
 #+TITLE: On which we may reflect
 
-How to learn?
+* How to learn
 
 1. Learn the right things (search for orthogonal skills that spans a space where
    you want to have impact)
@@ -19,3 +19,27 @@ context like scittle.
 But ... how do I want to handle it? Produce static HTML, then enrich it? With
 hooks, perhaps? Do I want to produce multiple files? I think I want to control
 that with EDN data.
+
+* How to work with the outline/structure
+
+No, that's not the right question.
+
+There's a reason I'm not using React for this. Or just powerpoint.
+
+The common "broad strokes" solution is often course, and hard to use. Not
+flexible. I'd rather have sharp, precise tools that feel right in the hand.
+
+I like outlines. And I like tools like Miro or Figma for visual presentation. So
+... perhaps control the overall structure as an outline?
+
+I want to ask Jack Rusher about how he's taking notes.
+
+** Digression - what ⟂ how
+
+Tension:
+
+Design ⟂ implementation enables discussing the /what/ in a resonable way
+
+BUT design isn't 100 % decoupled from implementation. What can be implemented
+directs the solution space. We want to /navigate the solution space
+effectively/. Not ignore it
