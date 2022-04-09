@@ -43,3 +43,8 @@ Design ⟂ implementation enables discussing the /what/ in a resonable way
 BUT design isn't 100 % decoupled from implementation. What can be implemented
 directs the solution space. We want to /navigate the solution space
 effectively/. Not ignore it
+
+* I'd like to play with Scittle
+
+Scittle makes. it easy to assemble a runtime that works - and that we can play
+with. Without too much mess, to much stuff.
